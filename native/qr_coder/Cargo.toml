@@ -1,0 +1,16 @@
+[package]
+name = "qr_coder"
+version = "0.1.0"
+authors = []
+
+[lib]
+name = "qr_coder"
+path = "src/lib.rs"
+crate-type = ["dylib"]
+
+[dependencies]
+rustler = "0.18.0"
+rustler_codegen = "0.18.0"
+lazy_static = "1.1.0"
+# qrcode = { version = "0.8", default-features = false }
+qrcode = "0.8"
