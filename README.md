@@ -22,13 +22,16 @@ You can then call the function:
 ```elixir
 {:ok, svg} = QRCoder.generate_svg("Elixir is awesome")
 ```
-This will return a `tuple` where **svg** is black & white svg binary.
+This will return a `tuple` where **svg** is black & white svg binary:
+
+![alt text](./examples/basic.svg "Basic QR Code")
 
 You can change the dark color by providing a valid HEX color:
 
 ```elixir
-{:ok, svg} = QRCoder.generate_svg("Elixir is awesome", "#d5dae6")
+{:ok, svg} = QRCoder.generate_svg("Elixir is awesome", "#21ABA5")
 ```
+![alt text](./examples/custom.svg "Custom QR Code")
 
 You can then save it:
 
