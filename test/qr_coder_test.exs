@@ -1,8 +1,11 @@
-defmodule QrCoderTest do
+defmodule QRCoderTest do
   use ExUnit.Case
-  doctest QrCoder
 
-  test "greets the world" do
-    assert QrCoder.hello() == :world
+  test "Generates an SVG" do
+    assert {:ok, _svg} = QRCoder.generate_svg("Elixir is awesome")
+  end
+
+  test "Generates an SVG with custom color." do
+    assert {:ok, _svg} = QRCoder.generate_svg("Elixir is awesome", "#21ABA5")
   end
 end
