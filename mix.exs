@@ -1,16 +1,29 @@
 defmodule QRCoder.MixProject do
   use Mix.Project
 
+  @version "0.1.0"
+
   def project do
     [
       app: :qr_coder,
-      version: "0.1.0",
+      name: "QRCoder",
+      description: "A Rust NIF for creating SVG QR codes",
+      package: [
+        name: :qrcoder,
+        maintainers: ["Pedro G. Galaviz (hello@pggalaviz.com)"],
+        licenses: ["MIT"],
+        links: %{"GitHub" => "https://github.com/pggalaviz/qrcoder"}
+      ],
+      source_url: "https://github.com/pggalaviz/qrcoder",
+      homepage_url: "https://github.com/pggalaviz/qrcoder",
+      version: @version,
       elixir: "~> 1.7",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       compilers: [:rustler] ++ Mix.compilers(),
       rustler_crates: rustler_crates(),
-      deps: deps()
+      deps: deps(),
+      docs: docs()
     ]
   end
 
@@ -24,7 +37,23 @@ defmodule QRCoder.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:rustler, "~> 0.18.0"}
+      {:rustler, "~> 0.18.0"},
+      # Code Analysis
+      {:dialyxir, "~> 1.0.0-rc.4", optional: true, only: [:dev], runtime: false},
+      # Docs
+      {:ex_doc, "~> 0.19.2", only: :dev, runtime: false}
+    ]
+  end
+
+  defp docs do
+    [
+      main: "QRCoder",
+      source_ref: "v#{@version}",
+      canonical: "http://hexdocs.pm/qrcoder",
+      source_url: "https://github.com/pggalaviz/qrcoder",
+      extras: [
+        "README.md"
+      ]
     ]
   end
 

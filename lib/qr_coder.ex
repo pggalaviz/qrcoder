@@ -6,7 +6,7 @@ defmodule QRCoder do
   use Rustler, otp_app: :qr_coder, crate: :qr_coder
 
   @doc """
-  Generate a basic SVG QR Code
+  Generates a basic SVG QR Code
   """
   @spec generate_svg(String.t()) :: {:ok, String.t()} | {:error, :invalid}
   def generate_svg(bin) when is_binary(bin) do
