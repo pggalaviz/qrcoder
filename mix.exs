@@ -9,7 +9,7 @@ defmodule QRCoder.MixProject do
       name: "QRCoder",
       description: "A Rust NIF for creating SVG QR codes",
       package: [
-        name: :qrcoder,
+        name: :qr_coder,
         maintainers: ["Pedro G. Galaviz (hello@pggalaviz.com)"],
         licenses: ["MIT"],
         links: %{"GitHub" => "https://github.com/pggalaviz/qrcoder"}

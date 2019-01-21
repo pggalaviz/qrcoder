@@ -11,7 +11,7 @@ You can add this package to your project dependencies:
 # mix.exs
 def deps do
   [
-    {:qr_coder, git: "https://github.com/pggalaviz/qrcoder.git"}
+    {:qr_coder, "~> 0.1.0"}
   ]
 end
 ```
