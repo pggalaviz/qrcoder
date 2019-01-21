@@ -6,14 +6,8 @@ defmodule QRCoder.MixProject do
   def project do
     [
       app: :qr_coder,
-      name: "QRCoder",
       description: "A Rust NIF for creating SVG QR codes",
-      package: [
-        name: :qr_coder,
-        maintainers: ["Pedro G. Galaviz (hello@pggalaviz.com)"],
-        licenses: ["MIT"],
-        links: %{"GitHub" => "https://github.com/pggalaviz/qrcoder"}
-      ],
+      package: package(),
       source_url: "https://github.com/pggalaviz/qrcoder",
       homepage_url: "https://github.com/pggalaviz/qrcoder",
       version: @version,
@@ -42,6 +36,16 @@ defmodule QRCoder.MixProject do
       {:dialyxir, "~> 1.0.0-rc.4", optional: true, only: [:dev], runtime: false},
       # Docs
       {:ex_doc, "~> 0.19.2", only: :dev, runtime: false}
+    ]
+  end
+
+  defp package do
+    [
+      name: :qr_coder,
+      maintainers: ["Pedro G. Galaviz (hello@pggalaviz.com)"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/pggalaviz/qrcoder"},
+      files: ~w(lib priv native/qr_coder/src native/qr_coder/Cargo* .formatter.exs mix.exs README* LICENSE*)
     ]
   end
 
