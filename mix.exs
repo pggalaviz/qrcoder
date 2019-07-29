@@ -1,7 +1,7 @@
 defmodule QRCoder.MixProject do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.1.1"
 
   def project do
     [
@@ -11,7 +11,7 @@ defmodule QRCoder.MixProject do
       source_url: "https://github.com/pggalaviz/qrcoder",
       homepage_url: "https://github.com/pggalaviz/qrcoder",
       version: @version,
-      elixir: "~> 1.7",
+      elixir: "~> 1.8",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       compilers: [:rustler] ++ Mix.compilers(),
@@ -31,7 +31,7 @@ defmodule QRCoder.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:rustler, "~> 0.18.0"},
+      {:rustler, "~> 0.20.0"},
       # Code Analysis
       {:dialyxir, "~> 1.0.0-rc.4", optional: true, only: [:dev], runtime: false},
       # Docs
