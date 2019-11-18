@@ -10,7 +10,7 @@ defmodule QRCoder do
   """
   @spec generate_svg(String.t()) :: {:ok, String.t()} | {:error, :invalid}
   def generate_svg(bin) when is_binary(bin) do
-    generate_svg(bin, "#000000")
+    nif_generate_svg(bin, "#000000")
   end
 
   def generate_svg(_), do: {:error, :invalid}
@@ -18,6 +18,11 @@ defmodule QRCoder do
   @doc """
   Generate an SVG QR Code with custom dark color
   """
-  @spec generate_svg(String.t(), String.t()) :: {:ok, String.t()}
-  def generate_svg(_, _), do: exit(:nif_not_loaded)
+  def generate_svg(bin, color) when is_binary(bin) do
+    nif_generate_svg(bin, color)
+  end
+  def generate_svg(_, _), do: {:error, :invalid}
+
+  @spec nif_generate_svg(String.t(), String.t()) :: {:ok, String.t()}
+  defp nif_generate_svg(_, _), do: exit(:nif_not_loaded)
 end

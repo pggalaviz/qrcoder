@@ -37,7 +37,7 @@ You can then save it:
 
 ```elixir
 {:ok, svg} = QRCoder.generate_svg("Elixir is awesome")
-File..write("/your/path/qrcode.svg", svg)
+File.write("/your/path/qrcode.svg", svg)
 ```
 
 Or just return the binary:

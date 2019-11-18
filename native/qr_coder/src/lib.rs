@@ -18,12 +18,12 @@ mod atoms {
 rustler_export_nifs! {
     "Elixir.QRCoder",
     [
-        ("generate_svg", 2, generate_svg)
+        ("nif_generate_svg", 2, nif_generate_svg)
     ],
     None
 }
 
-fn generate_svg<'a>(env: Env<'a>, args: &[Term<'a>]) -> NifResult<Term<'a>> {
+fn nif_generate_svg<'a>(env: Env<'a>, args: &[Term<'a>]) -> NifResult<Term<'a>> {
     let data: &str = try!(args[0].decode());
     let color: &str = try!(args[1].decode());
 

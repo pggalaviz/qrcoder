@@ -4,8 +4,8 @@ defmodule QRCoder.MixProject do
   def project do
     [
       app: :qr_coder,
-      version: "0.1.0",
-      elixir: "~> 1.7",
+      version: "0.1.1",
+      elixir: "~> 1.8",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       compilers: [:rustler] ++ Mix.compilers(),
@@ -24,7 +24,7 @@ defmodule QRCoder.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:rustler, "~> 0.18.0"}
+      {:rustler, "~> 0.21.0"}
     ]
   end
 
