@@ -5,13 +5,14 @@ It's a wrapper around [qrcode-rust](https://github.com/kennytm/qrcode-rust).
 
 ## Installation
 
-You can add this package to your project dependencies:
+You can find **QRCoder** in [Hex.pm](https://hex.pm/packages/qr_coder) and you can
+add it to your project dependencies:
 
 ```elixir
 # mix.exs
 def deps do
   [
-    {:qr_coder, git: "https://github.com/pggalaviz/qrcoder.git"}
+    {:qr_coder, "~> 0.1.0"}
   ]
 end
 ```
