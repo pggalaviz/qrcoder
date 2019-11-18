@@ -1,7 +1,7 @@
 defmodule QRCoder.MixProject do
   use Mix.Project
 
-  @version "0.1.1"
+  @version "0.1.2"
 
   def project do
     [
@@ -35,7 +35,7 @@ defmodule QRCoder.MixProject do
       # Code Analysis
       {:dialyxir, "~> 1.0.0-rc.4", optional: true, only: [:dev], runtime: false},
       # Docs
-      {:ex_doc, "~> 0.19.2", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.21.2", only: :dev, runtime: false}
     ]
   end
 
