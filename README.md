@@ -1,5 +1,7 @@
 # QRCoder
 
+[![Build Status](https://travis-ci.org/pggalaviz/qrcoder.svg?branch=master)](https://travis-ci.org/pggalaviz/qrcoder)
+
 An Elixir Rust NIF to create SVG QR codes.
 It's a wrapper around [qrcode-rust](https://github.com/kennytm/qrcode-rust).
 
