@@ -11,7 +11,7 @@ defmodule QRCoder.MixProject do
       package: package(),
       source_url: "https://github.com/pggalaviz/qrcoder",
       homepage_url: "https://github.com/pggalaviz/qrcoder",
-      elixir: "~> 1.8",
+      elixir: "~> 1.6",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       compilers: [:rustler] ++ Mix.compilers(),
