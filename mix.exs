@@ -51,7 +51,6 @@ defmodule QRCoder.MixProject do
 
   defp docs do
     [
-      main: "QRCoder",
       source_ref: "v#{@version}",
       canonical: "http://hexdocs.pm/qrcoder",
       source_url: "https://github.com/pggalaviz/qrcoder",
